@@ -1,0 +1,88 @@
+/* Add application styles & imports to this file! */
+// MAIN
+$not-quite-mustard: #ffb601;
+
+// Functional colors
+$detox: #0a1023;
+$midnight: #162148;
+$bleund: #3f445f;
+$silver-fox: #a9adc2;
+$sky: #d9dbe8;
+$glass: #f0f2fe;
+$glass-lighter: #f6f7fe;
+$noir: #000000;
+$blanche: #ffffff;
+
+// Text colors
+$quotidienne: #4a4a4a;
+$placeholder-grey: #c4c4c4;
+$blue-neutrals-in-between: #717590;
+$anthrax: #e4e4e4;
+$angel-dust: #f5f5f5;
+
+// Feedback colors
+$lady-danger: #fa5252;
+$mushy-pea: #53e48d;
+$yolk: #ffe600;
+
+// Accent colors
+$bianca-del-rio: #fff0cc;
+$violet-chachki: #eed9ff;
+$laganja-estranja: #cbf7dd;
+$trixie-mattel: #ffd0e9;
+
+// Others
+$scrim: rgba(0, 0, 0, 0.4);
+
+
+@mixin primary-button {
+  color: $noir;
+  background-color: $not-quite-mustard;
+  border-color: $not-quite-mustard;
+
+  .icons > i {
+    color: $noir;
+  }
+
+  &:hover {
+    color: $not-quite-mustard;
+    background: white;
+
+    .icons > i {
+      color: $not-quite-mustard;
+    }
+  }
+}
+
+
+* {
+  font-family: 'Roboto', sans-serif;
+  color: #4a4a4a;
+  box-sizing: border-box;
+  transition: all 0.2s ease-out;
+  outline: 1px solid transparent;
+}
+
+input {
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid grey;
+  padding: 10px;
+  margin: 5px 10px;
+
+  &:focus {
+    border-color: $not-quite-mustard;
+  }
+}
+
+button {
+  @include primary-button();
+  justify-content: center;
+  cursor: pointer;
+  width: 100%;
+  min-width: 50px;
+  min-height: 45px;
+  border-radius: 4px;
+  padding: 5px 15px;
+  border: 1px solid transparent;
+}

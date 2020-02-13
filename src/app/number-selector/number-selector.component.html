@@ -1,0 +1,19 @@
+<p>
+	Table:
+	<input type="text" [(ngModel)]="tableNumber">
+</p>
+
+<div class="buttons" *ngIf="tableNumber">
+	<button (click)="train()">Train</button>
+  <button (click)="shuffle()">Shuffle</button>
+
+</div>
+
+	<ng-container *ngIf="training">
+		<p class="total">Correct answers: {{total}}</p>
+		<div class="input-area">
+			<p class="question">{{tableNumber}} x {{currentNumber}} =</p>
+			<input type="text" [(ngModel)]="answer" (input)="handleInput($event)">
+  </div>
+
+	</ng-container>
